@@ -1,3 +1,5 @@
+import config from '../config';
+
 export default async (ctx, next) => {
   try {
     await next();
@@ -8,6 +10,9 @@ export default async (ctx, next) => {
     };
     if (err.message) {
       result.message = err.message;
+    }
+    if (result.statusCode === 500 && config.env === 'development') {
+      result.stack = err.stack;
     }
     ctx.status = result.statusCode;
     ctx.body = {...result};
