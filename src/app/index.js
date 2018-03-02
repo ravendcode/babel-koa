@@ -19,8 +19,8 @@ app.use(mount('/static', koaStatic(config.staticDir)));
 app.use(pugMdw());
 app.use(config.routes.apiRouter.routes());
 app.use(config.routes.apiRouter.allowedMethods());
-// app.use(config.routes.renderRouter.routes());
-// app.use(config.routes.renderRouter.allowedMethods());
+app.use(config.routes.renderRouter.routes());
+app.use(config.routes.renderRouter.allowedMethods());
 // if true render pug page/index else send file public/index.html
 app.use(spaRenderMdw(false));
 

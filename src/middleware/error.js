@@ -15,7 +15,12 @@ export default async (ctx, next) => {
       result.stack = err.stack;
     }
     ctx.status = result.statusCode;
-    ctx.body = {...result};
+
+    if (/^\/api/.test(ctx.request.path)) {
+      ctx.body = { ...result };
+    } else {
+      await ctx.render('error', { ...result });
+    }
     ctx.app.emit('error', err, ctx);
   }
 };
