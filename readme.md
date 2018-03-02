@@ -1,5 +1,10 @@
 # Babel Koa
 
+## Features
+
+1. Good project structure
+2. Tests in progress :)
+
 ## Usage
 
 1. Rename `.env.dist` in `.env` and edit
