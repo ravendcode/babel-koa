@@ -1,0 +1,63 @@
+# API
+
+@host = http://localhost:3000/api
+
+### API User
+
+GET {{host}}/user
+
+###
+
+POST {{host}}/user
+content-type: application/json
+
+{
+  "username": "John"
+}
+
+###
+
+GET {{host}}/user/1
+
+###
+
+PATCH {{host}}/user/1
+content-type: application/json
+
+{
+  "username": "Bob"
+}
+
+###
+
+DELETE {{host}}/user/1
+
+### API Article
+
+GET {{host}}/article
+
+###
+
+POST {{host}}/article
+content-type: application/json
+
+{
+  "title": "First article"
+}
+
+###
+
+GET {{host}}/article/1
+
+###
+
+PATCH {{host}}/article/1
+content-type: application/json
+
+{
+  "title": "Updated article"
+}
+
+###
+
+DELETE {{host}}/article/1
