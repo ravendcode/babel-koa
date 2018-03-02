@@ -10,6 +10,7 @@ export default {
     ctx.body = { data: 'getAll' };
   },
   async createOne(ctx) {
+    ctx.status = 201;
     ctx.body = { data: 'createOne', body: ctx.request.body };
   },
   async getOne(ctx) {

@@ -1,2 +1,2 @@
 /* eslint-disable no-console */
-console.log('app.js');
+console.log('static/js/app.js');

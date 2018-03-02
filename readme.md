@@ -3,7 +3,7 @@
 ## Features
 
 1. Good project structure
-2. Tests in progress :)
+2. Tests
 
 ## Usage
 

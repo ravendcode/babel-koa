@@ -1,9 +1,8 @@
-import path from 'path';
 import views from 'koa-views';
 import config from '../config';
 
 export default () => (
-  views(path.join(__dirname, '../../resources/templates'), {
+  views(config.templatesDir, {
     map: {
       html: 'pug',
     },
