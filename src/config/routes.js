@@ -3,9 +3,10 @@ import Router from 'koa-router';
 const apiRouter = new Router({ prefix: '/api' });
 const renderRouter = new Router();
 
-apiRouter.use(require('../app/api/user').default.routes());
-apiRouter.use(require('../app/api/article').default.routes());
-renderRouter.use(require('../app/render/page').default.routes());
+renderRouter.use(require('../render/page').default.routes());
+apiRouter.use(require('../api/user').default.routes());
+apiRouter.use(require('../api/article').default.routes());
+apiRouter.use(require('../api/jwt').default.routes());
 
 export default {
   apiRouter,

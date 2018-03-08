@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../../../app';
+import app from '../../app';
 
 const url = '/api/article';
 const param = '1';

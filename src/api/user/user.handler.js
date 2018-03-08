@@ -21,4 +21,7 @@ export default {
   async deleteOne(ctx) {
     ctx.body = { data: 'deleteOne', param: ctx.id };
   },
+  async me(ctx) {
+    ctx.body = 'me';
+  },
 };
