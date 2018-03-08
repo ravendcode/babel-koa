@@ -6,6 +6,6 @@ export default async (ctx, next) => {
     ctx.state.user = await jwt.verify(token.replace('Bearer ', ''), process.env.JWT_SECRET);
     await next();
   } catch (err) {
-    ctx.throw(401, 'Uknown user');
+    ctx.throw(401, 'Invalid user');
   }
 };
