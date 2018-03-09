@@ -2,6 +2,7 @@
 
 @host = http://localhost:3000/api/user
 
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTIwNTM2MTg1fQ.im_Eufe7xbr8ZX2wYA6YTCwSyOubzCmQhTNLneA1n-I
 GET {{host}}
 
 ###
@@ -29,3 +30,9 @@ content-type: application/json
 ###
 
 DELETE {{host}}/1
+
+###
+
+GET {{host}}/me
+content-type: application/json
+Authorization: Bearer {{token}}
