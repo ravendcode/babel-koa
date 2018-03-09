@@ -1,38 +1,37 @@
 # API User
-
 @host = http://localhost:3000/api/user
-
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTIwNTM2MTg1fQ.im_Eufe7xbr8ZX2wYA6YTCwSyOubzCmQhTNLneA1n-I
-GET {{host}}
-
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTIwNjAxMDk0fQ.Qek51Tg0VqcJ1v2VAziHgRSw0eMwwQTAx2plZi5rEhY
 ###
-
+GET {{host}}
+###
 POST {{host}}
 content-type: application/json
 
 {
-  "username": "John"
+  "username": "Bob",
+  "password": "qwerty"
 }
-
 ###
-
 GET {{host}}/1
-
 ###
-
 PATCH {{host}}/1
 content-type: application/json
+Authorization: Bearer {{token}}
 
 {
   "username": "Bob"
 }
-
 ###
-
 DELETE {{host}}/1
-
-###
-
-GET {{host}}/me
-content-type: application/json
 Authorization: Bearer {{token}}
+###
+GET {{host}}/me
+Authorization: Bearer {{token}}
+###
+POST {{host}}/login
+content-type: application/json
+
+{
+  "username": "John",
+  "password": "qwerty"
+}

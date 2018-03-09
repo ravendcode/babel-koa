@@ -3,23 +3,23 @@ export default {
     if (!id) {
       ctx.throw(404, 'Not Found Error');
     }
-    ctx.id = id;
+    ctx.state.id = id;
     return next();
   },
   async getAll(ctx) {
-    ctx.body = { data: 'getAll' };
+    ctx.body = { status: 'OK', message: 'getAll', data: [] };
   },
   async createOne(ctx) {
     ctx.status = 201;
-    ctx.body = { data: 'createOne', body: ctx.request.body };
+    ctx.body = { status: 'Created', message: 'createOne', data: ctx.request.body };
   },
   async getOne(ctx) {
-    ctx.body = { data: 'getOne', param: ctx.id };
+    ctx.body = { status: 'OK', message: 'getOne', data: ctx.state.id };
   },
   async updateOne(ctx) {
-    ctx.body = { data: 'updateOne', param: ctx.id, body: ctx.request.body };
+    ctx.body = { status: 'OK', message: 'updateOne', data: ctx.request.body };
   },
   async deleteOne(ctx) {
-    ctx.body = { data: 'deleteOne', param: ctx.id };
+    ctx.body = { status: 'OK', message: 'deleteOne', data: ctx.state.id };
   },
 };

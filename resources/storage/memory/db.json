@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "John",
+      "password": "qwerty",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTIwNjAxMDk0fQ.Qek51Tg0VqcJ1v2VAziHgRSw0eMwwQTAx2plZi5rEhY"
+    },
+    {
+      "id": 2,
+      "username": "Bob",
+      "password": "qwerty",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTIwNjAxMTM1fQ.s-0sVx4sdthHPwWWXHGItaryeRLvXoLxFjNSNToKKvE"
+    }
+  ]
+}
