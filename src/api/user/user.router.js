@@ -1,11 +1,10 @@
 import Router from 'koa-router';
 import handler from './user.handler';
-import jwtMdw from '../jwt/jwt.middleware';
 import authMdw from '../../middleware/auth';
 
 const router = new Router({ prefix: '/user' });
 
-router.get('/me', jwtMdw, authMdw, handler.me);
+router.get('/me', authMdw, handler.me);
 
 router.param('id', handler.findByParam);
 router.get('/', handler.getAll);
