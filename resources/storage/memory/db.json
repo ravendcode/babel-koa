@@ -11,6 +11,12 @@
       "username": "Bob",
       "password": "qwerty",
       "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNTIwNjAxMTM1fQ.s-0sVx4sdthHPwWWXHGItaryeRLvXoLxFjNSNToKKvE"
+    },
+    {
+      "id": 3,
+      "username": "Bob2",
+      "password": "qwerty",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNTIwNjE2NjYyfQ.2OeVnWgmdvUjqobq8we3KWHxQVWlLhG4kWUYwq42dEI"
     }
   ]
 }
