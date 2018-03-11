@@ -10,8 +10,6 @@ import spaMdw from './middleware/spa';
 
 const app = new Koa();
 
-// app.context.db = db();
-
 app.use(errorMdw);
 app.use(morgan(config.env === 'production' ? 'short' : 'dev'));
 app.use(koaStatic(config.publicDir));

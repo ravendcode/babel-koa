@@ -1,7 +1,7 @@
 import fs from 'fs';
 import { promisify } from 'util';
 import jwt from 'jsonwebtoken';
-import db from '../../../resources/storage/memory/db.json';
+import db from '../../../resources/storage/memory/dev.json';
 import config from '../../config';
 
 const writeFile = promisify(fs.writeFile);
@@ -30,7 +30,7 @@ export default {
         ctx.throw(400, `Username ${ctx.request.body.username} already taken`);
       }
       db.users.push(newUser);
-      await writeFile(config.resourcesDir + '/storage/memory/db.json', JSON.stringify(db, null, 2));
+      await writeFile(config.resourcesDir + '/storage/memory/dev.json', JSON.stringify(db, null, 2));
       ctx.status = 201;
       ctx.body = { status: 'Created', message: 'createOne', data: newUser };
     } catch (err) {

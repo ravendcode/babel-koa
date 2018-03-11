@@ -8,7 +8,7 @@ POST {{host}}
 content-type: application/json
 
 {
-  "username": "Bob44",
+  "username": "Bob444",
   "password": "qwerty"
 }
 ###
